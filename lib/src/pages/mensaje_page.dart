@@ -5,10 +5,16 @@ class Mensaje extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final String arg = ModalRoute.of(context).settings.arguments;
     return Scaffold(
+      appBar: new AppBar(
+        title: Text("PAGE MENSAJE"),
+        centerTitle: true,
+        backgroundColor: Colors.greenAccent,
+      ),
       body: Center(
         child: new Center(
-          child: Text("Hola mundo"),
+          child: Text(arg ?? "NO DAY INFORMACION"),
         ),
       ),
     );
